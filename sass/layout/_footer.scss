@@ -1,0 +1,33 @@
+.footer {
+  width: 100%;
+  padding: 30px 4% 10px;
+  background-color: $cWhite;
+  bottom: 0;
+  text-align: center;
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+  h1 {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+  }
+  // a {
+  //   text-decoration: none;
+  //   color: #4b4b4b;
+  // }
+  nav {
+    margin: 0 0 0 auto;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+  }
+  li {
+    margin: 0 0 0 15px;
+    font-size: 14px;
+  }
+
+}

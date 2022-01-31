@@ -1,0 +1,18 @@
+.pagination {
+  text-align: center;
+  a, span {
+    display: inline-block;
+    margin: 8px 0;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    padding: 14px 0;
+    box-sizing: border-box;
+    font-weight: bold;
+    line-height: 1;
+  }
+  .current {
+    background: #ffc33c;
+    color: $cWhite;
+  }
+}

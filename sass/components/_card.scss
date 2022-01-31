@@ -1,0 +1,29 @@
+// 外に出すと他ページでも使える
+.card-wrapper {
+  display: flex;
+  justify-content: space-between;
+  .card {
+    width: 32%;
+
+    &__heading {
+      margin: 10px 0;
+      display: flex;
+    }
+
+    &__date {
+      margin-right: 10px;
+    }
+
+    a {
+      display: block;
+    }
+    }
+  // 引数省略(初期値はmdの768px)
+  @include mq() {
+    .blog-card {
+    display: block;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+}

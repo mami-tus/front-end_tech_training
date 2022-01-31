@@ -1,0 +1,57 @@
+.article {
+  &__head {
+    margin-bottom: 30px;
+  }
+  &__heading {
+    text-align: center;
+    font-size: 25px;
+  }
+
+  &__title {
+    font-size: 32px;
+  }
+
+  &__info {
+    margin-top: 10px;
+    display: flex;
+  }
+
+  &__date {
+    font-size: 0.9rem;
+    margin-right: 10px;
+  }
+  &__body {
+    margin-bottom: 40px;
+  }
+  &__pager-home {
+    text-align: center;
+    background-color: $cBlack;
+    width: 300px;
+    margin:0 auto;
+    a{
+      color: $cWhite;
+      display: block;
+      // display: inline-block;横幅小さいまま
+    }
+  }
+  //見出しの間にマージン
+h3 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+h4 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 1.25rem;
+}
+p {
+  margin-bottom: 30px;
+  // font-size: 16px;
+  // font-size: 1rem;
+}
+}
+
+
+

@@ -1,0 +1,20 @@
+.label-category,.label-category {
+  display: block;
+    font-weight: bold;
+    width: 80px;
+    padding: 2px 10px;
+    font-size: 0.75rem;
+    text-align: center;
+    color: $cWhite;
+    border-radius: 20px;
+    // background-color: #647b93;
+  &__news,&__study {
+    background-color: #647b93; //後でカテゴリーごとに色変更
+  }
+  &__works,&__hobby{
+    background-color: #936464;
+  }
+  &__recruit,&__cafe{
+    background-color: #7f6493;
+  }
+}

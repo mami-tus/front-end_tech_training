@@ -1,0 +1,54 @@
+.blog-detail {
+  &__heading {
+    text-align: center;
+    font-size: 25px;
+  }
+  &__body {
+    margin-bottom: 40px;
+
+    .card-wrapper {
+      margin-bottom: 20px;
+    }
+  }
+
+  //.pagenationで他ページから参照できるようにした
+  // &__pagination {
+  //   text-align: center;
+  //   a, span {
+  //     display: inline-block;
+  //     margin: 8px 0;
+  //     border-radius: 100%;
+  //     width: 42px;
+  //     height: 42px;
+  //     padding: 14px 0;
+  //     box-sizing: border-box;
+  //     font-weight: bold;
+  //     line-height: 1;
+  //   }
+  //   .current {
+  //     background: #ffc33c;
+  //     color: $cWhite;
+  //   }
+  // }
+
+  // homeに記載のため不要
+  // .card-wrapper {
+  //   display: flex;
+  //   justify-content: space-between;
+  //   .blog-card {
+  //     width: 32%;
+
+  //     a {
+  //       display: block;
+  //     }
+  //   }
+  //   @include mq() {
+  //     // 引数省略(初期値はmdの768px)
+  //     display: block;
+  //     .blog-card {
+  //       margin: 0 auto;
+  //       width: 100%;
+  //     }
+  //   }
+  // }
+}

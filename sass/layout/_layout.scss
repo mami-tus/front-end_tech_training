@@ -1,0 +1,14 @@
+.l-section {
+  padding: 70px 0;
+}
+.l-inner {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 15px;  // padding入れると狭くなった時に余白できる
+  &--sm {
+    max-width: 950px;
+  }
+  &--xl {
+    max-width: 1140px;
+  }
+}

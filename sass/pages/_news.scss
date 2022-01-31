@@ -1,0 +1,81 @@
+.news-detail {
+  &__heading {
+    text-align: center;
+    font-size: 25px;
+  }
+  &__body {
+    margin-bottom: 40px;
+  }
+  ul {
+    padding: 0;
+  }
+
+  // .pagenationにして他ページでも参照
+  // &__pagination {
+  //   text-align: center;
+  //   a, span {
+  //     display: inline-block;
+  //     margin: 8px 0;
+  //     border-radius: 100%;
+  //     width: 42px;
+  //     height: 42px;
+  //     padding: 14px 0;
+  //     box-sizing: border-box;
+  //     font-weight: bold;
+  //     line-height: 1;
+  //   }
+  //   .current {
+  //     background: #ffc33c;
+  //     color: $cWhite;
+  //   }
+  // }
+}
+
+
+
+// homeに追加したので不要
+// .news-list {
+//   &__item {
+//     display: flex;
+//     &:not(:last-child) {
+//       margin-bottom: 15px;
+//     }
+//   }
+
+//   &__heading {
+//     display: flex;
+//   }
+
+//   &__date {
+//     margin-right: 20px;
+//   }
+
+//   &__heading {
+//     margin-right: 20px;
+
+//     .label-category {
+//       display: block;
+//       font-weight: bold;
+//       width: 80px;
+//       padding: 2px 10px;
+//       font-size: 0.75rem;
+//       text-align: center;
+//       color: $cWhite;
+//       border-radius: 20px;
+//       &__news {
+//         background-color: #647b93; //後でカテゴリーごとに色変更
+//       }
+//       &__works {
+//         background-color: #936464;
+//       }
+//       &__recruit {
+//         background-color: #649379;
+//       }
+
+//     }
+//   }
+
+
+// }
+
+
