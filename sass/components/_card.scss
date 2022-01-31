@@ -2,8 +2,16 @@
 .card-wrapper {
   display: flex;
   justify-content: space-between;
+  @include mq(md) { // 引数省略(初期値はmdの768px)
+    display: block;
+  }
   .card {
     width: 32%;
+    @include mq(md) { // 引数省略(初期値はmdの768px)
+      width: 100%;
+      margin: 30px 0 auto;
+    }
+
 
     &__heading {
       margin: 10px 0;
@@ -16,14 +24,6 @@
 
     a {
       display: block;
-    }
-    }
-  // 引数省略(初期値はmdの768px)
-  @include mq() {
-    .blog-card {
-    display: block;
-      width: 100%;
-      margin: 0 auto;
     }
   }
 }

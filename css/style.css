@@ -321,14 +321,14 @@ ul {
 /* Slider */
 /* line 45, ../sass/components/_slick-theme.scss */
 .slick-loading .slick-list {
-  background: #fff url('/img/ajax-loader.gif') center center no-repeat;
+  background: #fff url('/img/ajax-loader.gif?1643633918') center center no-repeat;
 }
 
 /* Icons */
 @font-face {
   font-family: "slick";
-  src: url('/fonts/slick.eot');
-  src: url('/fonts/slick.eot?#iefix') format("embedded-opentype"), url('/fonts/slick.woff') format("woff"), url('/fonts/slick.ttf') format("truetype"), url('/fonts/slick.svg#slick') format("svg");
+  src: url('/fonts/slick.eot?1643641125');
+  src: url('/fonts/slick.eot?&1643641125#iefix') format("embedded-opentype"), url('/fonts/slick.woff?1643641125') format("woff"), url('/fonts/slick.ttf?1643641125') format("truetype"), url('/fonts/slick.svg?1643641125#slick') format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -614,30 +614,35 @@ ul {
   display: flex;
   justify-content: space-between;
 }
-/* line 5, ../sass/components/_card.scss */
+@media screen and (max-width: 768px) {
+  /* line 2, ../sass/components/_card.scss */
+  .card-wrapper {
+    display: block;
+  }
+}
+/* line 8, ../sass/components/_card.scss */
 .card-wrapper .card {
   width: 32%;
 }
-/* line 8, ../sass/components/_card.scss */
+@media screen and (max-width: 768px) {
+  /* line 8, ../sass/components/_card.scss */
+  .card-wrapper .card {
+    width: 100%;
+    margin: 30px 0 auto;
+  }
+}
+/* line 16, ../sass/components/_card.scss */
 .card-wrapper .card__heading {
   margin: 10px 0;
   display: flex;
 }
-/* line 13, ../sass/components/_card.scss */
+/* line 21, ../sass/components/_card.scss */
 .card-wrapper .card__date {
   margin-right: 10px;
 }
-/* line 17, ../sass/components/_card.scss */
+/* line 25, ../sass/components/_card.scss */
 .card-wrapper .card a {
   display: block;
-}
-@media screen and (max-width: 768px) {
-  /* line 23, ../sass/components/_card.scss */
-  .card-wrapper .blog-card {
-    display: block;
-    width: 100%;
-    margin: 0 auto;
-  }
 }
 
 /* line 2, ../sass/components/_article.scss */

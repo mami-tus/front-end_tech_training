@@ -1,8 +1,9 @@
 @charset "utf-8";
 
+@import "base/mixin"; //順番大事、変数読み込まれない
 @import "base/reset";
 @import "base/variables";
-@import "base/mixin"; //順番大事、変数読み込まれない
+
 @import "base/base";
 
 @import "components/gnav";
