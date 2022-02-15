@@ -3,31 +3,23 @@
 @import "base/mixin"; //順番大事、変数読み込まれない
 @import "base/reset";
 @import "base/variables";
-
 @import "base/base";
 
 @import "components/gnav";
 @import "components/slick";
 @import "components/slick-theme";
-@import "layout/header";
-
-@import "pages/home";
-@import "layout/layout";
-@import "layout/footer";
-
-
 @import "components/card";
 @import "components/article";
 @import "components/label";
 @import "components/pagination";
+@import "components/text-animation";
 
+@import "layout/header";
+@import "layout/layout";
+@import "layout/footer";
 
-
+@import "pages/home";
 @import "pages/news";
 @import "pages/blog";
 @import "pages/news-article";
 @import "pages/blog-article";
-
-
-
-

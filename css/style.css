@@ -492,123 +492,6 @@ ul {
   opacity: 0.75;
 }
 
-/* line 1, ../sass/layout/_header.scss */
-.header {
-  width: 100%;
-  padding: 25px 4% 15px;
-  background-color: #fff;
-  position: fixed;
-  top: 0;
-  display: flex;
-  align-items: center;
-  z-index: 9999;
-}
-/* line 10, ../sass/layout/_header.scss */
-.header .logo {
-  font-size: 20px;
-  margin: 0;
-  padding: 0;
-}
-
-/* line 15, ../sass/pages/_home.scss */
-.news__heading {
-  text-align: center;
-  font-size: 25px;
-}
-/* line 19, ../sass/pages/_home.scss */
-.news ul {
-  padding: 0;
-}
-
-/* line 25, ../sass/pages/_home.scss */
-.news-list__item {
-  display: flex;
-}
-/* line 27, ../sass/pages/_home.scss */
-.news-list__item:not(:last-child) {
-  margin-bottom: 15px;
-}
-/* line 32, ../sass/pages/_home.scss */
-.news-list__heading {
-  display: flex;
-}
-/* line 36, ../sass/pages/_home.scss */
-.news-list__date {
-  margin-right: 20px;
-}
-/* line 40, ../sass/pages/_home.scss */
-.news-list__heading {
-  margin-right: 20px;
-}
-/* line 64, ../sass/pages/_home.scss */
-.news-list__body {
-  max-width: 710px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-/* line 73, ../sass/pages/_home.scss */
-.blog__heading {
-  text-align: center;
-  font-size: 25px;
-}
-
-/* line 1, ../sass/layout/_layout.scss */
-.l-section {
-  padding: 70px 0;
-}
-
-/* line 4, ../sass/layout/_layout.scss */
-.l-inner {
-  max-width: 780px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-/* line 8, ../sass/layout/_layout.scss */
-.l-inner--sm {
-  max-width: 950px;
-}
-/* line 11, ../sass/layout/_layout.scss */
-.l-inner--xl {
-  max-width: 1140px;
-}
-
-/* line 1, ../sass/layout/_footer.scss */
-.footer {
-  width: 100%;
-  padding: 30px 4% 10px;
-  background-color: #fff;
-  bottom: 0;
-  text-align: center;
-}
-/* line 7, ../sass/layout/_footer.scss */
-.footer__inner {
-  display: flex;
-  align-items: center;
-}
-/* line 11, ../sass/layout/_footer.scss */
-.footer h1 {
-  font-size: 20px;
-  margin: 0;
-  padding: 0;
-}
-/* line 20, ../sass/layout/_footer.scss */
-.footer nav {
-  margin: 0 0 0 auto;
-}
-/* line 23, ../sass/layout/_footer.scss */
-.footer ul {
-  list-style: none;
-  margin: 0;
-  display: flex;
-}
-/* line 28, ../sass/layout/_footer.scss */
-.footer li {
-  margin: 0 0 0 15px;
-  font-size: 14px;
-}
-
 /* line 2, ../sass/components/_card.scss */
 .card-wrapper {
   display: flex;
@@ -745,6 +628,360 @@ ul {
 .pagination .current {
   background: #ffc33c;
   color: #fff;
+}
+
+/* line 11, ../sass/components/_text-animation.scss */
+.animate-title.inview,
+.tween-animate-title.inview {
+  opacity: 1;
+}
+/* line 14, ../sass/components/_text-animation.scss */
+.animate-title.inview .char,
+.tween-animate-title.inview .char {
+  display: inline-block;
+}
+/* line 19, ../sass/components/_text-animation.scss */
+.animate-title .char,
+.tween-animate-title .char {
+  opacity: 0;
+}
+
+/* line 24, ../sass/components/_text-animation.scss */
+.animate-title.inview .char {
+  animation-name: kf-animate-chars;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.39, 1.57, 0.58, 1);
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: both;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(1) {
+  animation-delay: 0.04s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(2) {
+  animation-delay: 0.08s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(3) {
+  animation-delay: 0.12s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(4) {
+  animation-delay: 0.16s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(5) {
+  animation-delay: 0.2s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(6) {
+  animation-delay: 0.24s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(7) {
+  animation-delay: 0.28s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(8) {
+  animation-delay: 0.32s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(9) {
+  animation-delay: 0.36s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(10) {
+  animation-delay: 0.4s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(11) {
+  animation-delay: 0.44s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(12) {
+  animation-delay: 0.48s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(13) {
+  animation-delay: 0.52s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(14) {
+  animation-delay: 0.56s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(15) {
+  animation-delay: 0.6s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(16) {
+  animation-delay: 0.64s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(17) {
+  animation-delay: 0.68s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(18) {
+  animation-delay: 0.72s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(19) {
+  animation-delay: 0.76s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(20) {
+  animation-delay: 0.8s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(21) {
+  animation-delay: 0.84s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(22) {
+  animation-delay: 0.88s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(23) {
+  animation-delay: 0.92s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(24) {
+  animation-delay: 0.96s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(25) {
+  animation-delay: 1s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(26) {
+  animation-delay: 1.04s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(27) {
+  animation-delay: 1.08s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(28) {
+  animation-delay: 1.12s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(29) {
+  animation-delay: 1.16s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(30) {
+  animation-delay: 1.2s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(31) {
+  animation-delay: 1.24s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(32) {
+  animation-delay: 1.28s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(33) {
+  animation-delay: 1.32s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(34) {
+  animation-delay: 1.36s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(35) {
+  animation-delay: 1.4s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(36) {
+  animation-delay: 1.44s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(37) {
+  animation-delay: 1.48s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(38) {
+  animation-delay: 1.52s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(39) {
+  animation-delay: 1.56s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(40) {
+  animation-delay: 1.6s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(41) {
+  animation-delay: 1.64s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(42) {
+  animation-delay: 1.68s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(43) {
+  animation-delay: 1.72s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(44) {
+  animation-delay: 1.76s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(45) {
+  animation-delay: 1.8s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(46) {
+  animation-delay: 1.84s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(47) {
+  animation-delay: 1.88s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(48) {
+  animation-delay: 1.92s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(49) {
+  animation-delay: 1.96s;
+}
+/* line 33, ../sass/components/_text-animation.scss */
+.animate-title.inview .char:nth-child(50) {
+  animation-delay: 2s;
+}
+
+@keyframes kf-animate-chars {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* line 1, ../sass/layout/_header.scss */
+.header {
+  width: 100%;
+  padding: 25px 4% 15px;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  z-index: 9999;
+}
+/* line 10, ../sass/layout/_header.scss */
+.header .logo {
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 1, ../sass/layout/_layout.scss */
+.l-section {
+  padding: 70px 0;
+}
+
+/* line 4, ../sass/layout/_layout.scss */
+.l-inner {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+/* line 8, ../sass/layout/_layout.scss */
+.l-inner--sm {
+  max-width: 950px;
+}
+/* line 11, ../sass/layout/_layout.scss */
+.l-inner--xl {
+  max-width: 1140px;
+}
+
+/* line 1, ../sass/layout/_footer.scss */
+.footer {
+  width: 100%;
+  padding: 30px 4% 10px;
+  background-color: #fff;
+  bottom: 0;
+  text-align: center;
+}
+/* line 7, ../sass/layout/_footer.scss */
+.footer__inner {
+  display: flex;
+  align-items: center;
+}
+/* line 11, ../sass/layout/_footer.scss */
+.footer h1 {
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+/* line 20, ../sass/layout/_footer.scss */
+.footer nav {
+  margin: 0 0 0 auto;
+}
+/* line 23, ../sass/layout/_footer.scss */
+.footer ul {
+  list-style: none;
+  margin: 0;
+  display: flex;
+}
+/* line 28, ../sass/layout/_footer.scss */
+.footer li {
+  margin: 0 0 0 15px;
+  font-size: 14px;
+}
+
+/* line 15, ../sass/pages/_home.scss */
+.news__heading {
+  text-align: center;
+  font-size: 25px;
+}
+/* line 19, ../sass/pages/_home.scss */
+.news ul {
+  padding: 0;
+}
+
+/* line 25, ../sass/pages/_home.scss */
+.news-list__item {
+  display: flex;
+}
+/* line 27, ../sass/pages/_home.scss */
+.news-list__item:not(:last-child) {
+  margin-bottom: 15px;
+}
+/* line 32, ../sass/pages/_home.scss */
+.news-list__heading {
+  display: flex;
+}
+/* line 36, ../sass/pages/_home.scss */
+.news-list__date {
+  margin-right: 20px;
+}
+/* line 40, ../sass/pages/_home.scss */
+.news-list__heading {
+  margin-right: 20px;
+}
+/* line 64, ../sass/pages/_home.scss */
+.news-list__body {
+  max-width: 710px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* line 73, ../sass/pages/_home.scss */
+.blog__heading {
+  text-align: center;
+  font-size: 25px;
 }
 
 /* line 2, ../sass/pages/_news.scss */
