@@ -29,10 +29,13 @@ $('.menu').on('click',function(){
 
 // slider
 $('.slider-1').slick({
-  autoplay: true,
-  autoplaySpeed: 3000,
+  autoplay: true, //自動再生
+  autoplaySpeed: 3000, //スライド切り替え時間設定
   dots: true,
   arrows: false,
+    pauseOnFocus: false,//フォーカスで一時停止
+    pauseOnHover: false,//マウスホバーで一時停止
+    pauseOnDotsHover: false//ドットナビをマウスホバーで一時停止
 });
 
 

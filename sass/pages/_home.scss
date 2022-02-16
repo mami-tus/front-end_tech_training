@@ -27,6 +27,11 @@
     &:not(:last-child) {
       margin-bottom: 15px;
     }
+
+    // newsのレスポンシブ対応
+    @include mq(md) {
+      display: block;
+    }
   }
 
   &__heading {
