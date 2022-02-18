@@ -1,64 +1,11 @@
-<!DOCTYPE html>
-<html lang="ja">
+<?php get_header(); ?>
 
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mamitus</title>
-    <link rel="stylesheet" href="./css/slick-theme.css">
-    <link rel="stylesheet" href="./css/slick.css">
-    <link rel="stylesheet" href="./style.css">
-  </head>
-
-
-  <body id="home">
-    <div class="wrapper">
-
-      <!-- header -->
-      <header class="header">
-        <div class="header__logo">
-          <h1 class="logo">
-            <a href="index.html" class="logo__link">mamitus</a>
-          </h1>
-        </div>
-
-        <!-- menu -->
-
-        <div class="menu">
-          <a class="menu__link">
-            <span class="menu__line menu__line--top"></span>
-            <span class="menu__line menu__line--center"></span>
-            <span class="menu__line menu__line--bottom"></span>
-          </a>
-        </div>
-
-        <!-- gnav -->
-
-        <nav class="gnav">
-          <div class="gnav__wrap">
-            <ul class="gnav__list">
-              <li class="gnav__item">
-                <a class="gnav__link" href="index.html">HOME</a>
-              </li>
-              <li class="gnav__item">
-                <a class="gnav__link" href="news.html">NEWS</a>
-              </li>
-              <li class="gnav__item">
-                <a class="gnav__link" href="blog.html">BLOG</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-
-      </header>
-
-      <!-- slider -->
+<!-- slider -->
       <div class="slider-1">
-        <div><a href="#"><img src="./img/kv.jpg"></a></div>
-        <div><a href="#"><img src="./img/blog01_coding.jpg"></a></div>
-        <div><a href="#"><img src="./img/blog02_bicycle.jpg"></a></div>
-        <div><a href="#"><img src="./img/blog03_coffee.jpg"></a></div>
+        <div><a href="#"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/./img/kv.jpg"></a></div>
+        <div><a href="#"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/./img/blog01_coding.jpg"></a></div>
+        <div><a href="#"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/./img/blog02_bicycle.jpg"></a></div>
+        <div><a href="#"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/./img/blog03_coffee.jpg"></a></div>
       </div>
 
       <!-- contents -->
@@ -126,7 +73,7 @@
                 <div class="card">
                   <a href="blog-article.html" class="card__link">
                     <div class="card__img-wrapper">
-                      <img class="card__img" src="./img/blog01_coding.jpg">
+                      <img class="card__img" src="<?php bloginfo( 'stylesheet_directory' ); ?>/./img/blog01_coding.jpg">
                     </div>
                     <div class="card__heading">
                       <time datetime="2022-01-01" class="card__date animate-title">2030.02.11</time>
@@ -142,7 +89,7 @@
                 <div class="card">
                   <a href="blog-article.html" class="card__link">
                     <div class="card__img-wrapper">
-                      <img class="card__img" src="./img/blog02_bicycle.jpg">
+                      <img class="card__img" src="<?php bloginfo( 'stylesheet_directory' ); ?>/./img/blog02_bicycle.jpg">
                     </div>
                     <div class="card__heading">
                       <time datetime="2022-01-01" class="card__date animate-title">2030.02.01</time>
@@ -158,7 +105,7 @@
                 <div class="card">
                   <a href="blog-article.html" class="card__link">
                     <div class="card__img-wrapper">
-                      <img class="card__img" src="./img/blog03_coffee.jpg">
+                      <img class="card__img" src="<?php bloginfo( 'stylesheet_directory' ); ?>/./img/blog03_coffee.jpg">
                     </div>
                     <div class="card__heading">
                       <time datetime="2022-01-01" class="card__date animate-title">2030.01.15</time>
@@ -179,41 +126,4 @@
         </section>
       </main>
 
-      <!-- footer -->
-      <footer class="footer">
-        <div class="footer__inner">
-          <div class="footer__logo">
-            <h1 class="logo">
-              <a href="index.html" class="logo__link">mamitus</a>
-            </h1>
-          </div>
-          <nav class="footer-nav">
-            <ul class="footer-nav__list">
-              <li class="footer-nav__item">
-                <a class="footer-nav__link" href="index.html">HOME</a>
-              </li>
-              <li class="footer-nav__item">
-                <a class="footer-nav__link" href="news.html">NEWS</a>
-              </li>
-              <li class="footer-nav__item">
-                <a class="footer-nav__link" href="blog.html">BLOG</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-
-        <small class="copyright">&copy;2022 mamitus</small>
-      </footer>
-
-
-
-    </div>
-    <!-- jQueryのCDN -->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-    <script src="./js/slick.min.js"></script>
-    <script src="./js/text-animation.js"></script>
-    <script src="./js/main.js"></script>
-  </body>
-
-</html>
+      <?php get_header(); ?>

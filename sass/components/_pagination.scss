@@ -51,14 +51,14 @@
       &:first-child {
         span {
           &::after {
-            content: "前の10件へ";
+            content: "　前の10件へ";
           }
         }
       }
       &:last-child {
         span {
           &::before {
-            content: "次の10件へ";
+            content: "次の10件へ　";
           }
         }
       }
