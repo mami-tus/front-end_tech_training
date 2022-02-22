@@ -9,13 +9,16 @@
           <nav class="footer-nav">
             <ul class="footer-nav__list">
               <li class="footer-nav__item">
-                <a class="footer-nav__link" href="index.html">HOME</a>
+                <a class="footer-nav__link" href="<?php bloginfo('url'); ?>/">HOME</a>
               </li>
               <li class="footer-nav__item">
-                <a class="footer-nav__link" href="news.html">NEWS</a>
+                <a class="footer-nav__link" href="<?php bloginfo('url'); ?>/service">SERVICE</a>
               </li>
               <li class="footer-nav__item">
-                <a class="footer-nav__link" href="blog.html">BLOG</a>
+                <a class="footer-nav__link" href="<?php bloginfo('url'); ?>/news">NEWS</a>
+              </li>
+              <li class="footer-nav__item">
+                <a class="footer-nav__link" href="<?php bloginfo('url'); ?>/blog">BLOG</a>
               </li>
             </ul>
           </nav>
@@ -25,13 +28,15 @@
       </footer>
 
       </div>
-    <!-- jQueryのCDN -->
-    <script type="text/javascript" src="<?php bloginfo( 'stylesheet_directory' ); ?>/https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <!-- jQueryのCDN -->
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-    <script src="<?php bloginfo( 'stylesheet_directory' ); ?>/./js/slick.min.js"></script>
-    <script src="<?php bloginfo( 'stylesheet_directory' ); ?>/./js/text-animation.js"></script>
-    <script src="<?php bloginfo( 'stylesheet_directory' ); ?>/./js/main.js"></script>
+      <script src="<?php bloginfo('stylesheet_directory'); ?>/js/slick.min.js"></script>
+      <script src="<?php bloginfo('stylesheet_directory'); ?>/js/text-animation.js"></script>
+      <script src="<?php bloginfo('stylesheet_directory'); ?>/js/main.js"></script>
 
-<?php wp_footer(); ?>
-  </body>
-</html>
+      <!-- bodyタグの前に必須 -->
+      <?php wp_footer(); ?>
+      </body>
+
+      </html>

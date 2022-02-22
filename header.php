@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mamitus</title>
-    <link rel="stylesheet" href="<?php bloginfo( 'stylesheet_directory' ); ?>/./css/slick-theme.css">
-    <link rel="stylesheet" href="<?php bloginfo( 'stylesheet_directory' ); ?>/./css/slick.css">
+    <title><?php bloginfo('name'); ?> | <?php wp_title(); ?></title>
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/slick-theme.css">
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/slick.css">
     <link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet">
-    <?php bloginfo( 'stylesheet_directory' ); ?>/
+    <!-- headの最後に必須 -->
+    <?php wp_head(); ?>
   </head>
-
 
   <body id="home">
     <div class="wrapper">
@@ -20,7 +20,7 @@
       <header class="header">
         <div class="header__logo">
           <h1 class="logo">
-          <title><?php bloginfo('name'); ?> | <?php wp_title(); ?></title>
+            <a href="<?php bloginfo('url'); ?>/" class="logo__link">mamitus</a>
           </h1>
         </div>
 
@@ -39,17 +39,14 @@
         <nav class="gnav">
           <div class="gnav__wrap">
             <ul class="gnav__list">
-              <li class="gnav__item">
-                <a class="gnav__link" href="index.html">HOME</a>
-              </li>
-              <li class="gnav__item">
-                <a class="gnav__link" href="news.html">NEWS</a>
-              </li>
-              <li class="gnav__item">
-                <a class="gnav__link" href="blog.html">BLOG</a>
-              </li>
+              "<?php wp_nav_menu(array(
+   'theme_location'=>'place_global',
+            'container'     =>'',
+            'menu_class'    =>'',
+            'items_wrap' => '%3$s',//<ul>を出力しない
+          ));
+    ?>"
             </ul>
           </div>
         </nav>
       </header>
-
