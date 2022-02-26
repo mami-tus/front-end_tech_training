@@ -1,8 +1,7 @@
 .footer {
-  width: 100%;
+  margin-top:auto;
   padding: 30px 4% 10px;
   background-color: $cWhite;
-  bottom: 0;
   text-align: center;
   &__inner {
     display: flex;
@@ -31,3 +30,7 @@
   }
 
 }
+
+
+
+

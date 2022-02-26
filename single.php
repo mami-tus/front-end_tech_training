@@ -1,48 +1,67 @@
-<?php get_header(); ?>
+<!DOCTYPE html>
+<html lang="ja">
 
-<!-- contents -->
-<main class="contents" id="contents">
-  <div class="">
-    <?php if (function_exists('bcn_display')) {
-      bcn_display();
-    } ?>
-  </div>
+<head>
 
-  <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+  <?php get_header(); ?>
 
+</head>
 
-      <section class="news-article-wrapper l-section">
-        <div class="l-inner l-inner--xs">
-          <div class="news-article">
-            <div class="article">
-              <div class="article__heading">
-                <h2 class="animate-title">NEWS</h2>
-              </div>
-              <div class="article__head">
-                <div class="article__title animate-title">
-                  <?php the_title(); ?></div>
-                <div class="article__info">
-                  <time class="article__date"><?php the_time('Y/m/d'); ?></time>
-                  <div class="card__label">
-                    <span class="label-category label-category__news">お知らせ</span>
+<body id="home">
+  <div class="wrapper">
+
+    <!-- header -->
+    <?php get_template_part('includes/header'); ?>
+
+    <?php if (have_posts()) : ?>
+      <?php while (have_posts()) : the_post(); ?>
+
+        <!-- contents -->
+        <main class="contents" id="contents">
+
+          <!-- blog detail -->
+          <section class="blog-article-wrapper l-section">
+            <div class="l-inner l-inner--xs">
+              <div class="blog-article">
+                <div class="article">
+                  <div class="article__heading">
+                    <h2 class="animate-title">NEWS</h2>
                   </div>
+                  <div class="article__head">
+                    <div class="article__title animate-title"><?php the_title(); ?></div>
+                    <div class="article__info">
+                      <time class="article__date"><?php the_date(); ?></time>
+                      <div class="article__label">
+                        <?php //カテゴリー名、ラベル色反映
+                        news_cat_color()
+                        ?>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="article__body">
+                    <?php the_content(); ?>
+                  </div>
+
+                  <div class="btn">
+                    <a href="<?php echo get_post_type_archive_link('news'); ?>">NEWS一覧</a>
+
+                  </div>
+
                 </div>
+
               </div>
-              <?php the_content(); ?>
-
-          <?php endwhile;
-      endif; ?>
-
-          <div class="article__pager-home">
-            <a class="btn" href="<?php bloginfo('url'); ?>/">HOME</a>
-          </div>
             </div>
+          </section>
+        </main>
 
-          </div>
-        </div>
-      </section>
+      <?php endwhile; ?>
+    <?php endif; ?>
+    <!-- footer -->
+    <?php get_template_part('includes/footer'); ?>
 
+  </div>
+  <?php get_footer(); ?>
+</body>
 
-</main>
-
-<?php get_footer(); ?>
+</html>

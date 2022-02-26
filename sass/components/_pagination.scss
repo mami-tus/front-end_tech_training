@@ -1,69 +1,40 @@
 .pagination {
-  text-align: center;
-  li {
-    display: inline;
-    margin: 0 2px;
-    padding: 0;
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    position: relative;
-    border-radius: 50px;
-    &:first-child,
-    &:last-child {
-      background: #ccf;
-    }
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-size: 13px;
 
-    a {
-      vertical-align: middle;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      text-align: center;
-      display: table;
-      text-decoration: none;
-      span {
-        display: table-cell;
-        vertical-align: middle;
-      }
-    }
+  span,
+  a {
+    display: block;
+    width: auto;
+    margin: 4px;
+    padding: 8px;
+    border: 1px solid $cBlack;
+    background-color: $cWhite;
+    text-decoration: none;
+    text-align: center;
+    line-height: 16px;
   }
 
-  @include mq(md) {
-    li {
-      display: none;
+  /* ページ番号 */
+  .pager {
+    width: 32px;
+  }
 
-      &:first-child,
-      &:last-child {
-        display: inline-block;
-        width: 40%;
-        height: 50px;
-        text-align: center;
-        a {
-          width: 100%;
-          text-align: center;
-        }
-      }
+  /* ホバー時 & 現在のページ */
+  a:hover,
+  .current {
+    color: $cWhite;
+    border-color: $cBlack;
+    background-color: $cBlack;
+    opacity: 1; //全体のopacity解除のため追加
+  }
 
-      &:first-child {
-        span {
-          &::after {
-            content: "　前の10件へ";
-          }
-        }
-      }
-      &:last-child {
-        span {
-          &::before {
-            content: "次の10件へ　";
-          }
-        }
-      }
-    }
+  /* Page x / y */
+  .page_num {
+    display: none;
   }
 }
-
-

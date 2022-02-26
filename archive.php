@@ -1,159 +1,85 @@
-<?php get_header(); ?>
+<!DOCTYPE html>
+<html lang="ja">
 
-<!-- contents -->
-<main class="contents" id="contents">
-<div class="">
-    <?php if(function_exists('bcn_display'))
-    {
-        bcn_display();
-    }?>
-</div>
+<head>
 
-  <!-- news-list -->
-  <section class="news-detail l-section">
+  <?php get_header(); ?>
+
+</head>
+
+<body id="home">
+  <div class="wrapper">
+
+    <!-- header -->
+    <?php get_template_part('includes/header'); ?>
 
 
+    <!-- contents -->
+    <main class="contents" id="contents">
 
-    <?php if (in_category(array('4'))) { ?>
-    <div class="l-inner l-inner--sm">
-      <div class="news-detail__heading">
-        <h2 class="animate-title">NEWS一覧</h2>
-      </div>
+      <!-- news一覧 -->
+      <section class="news l-section">
+        <div class="l-inner">
 
-      <div class="news-detail__body">
+          <div class="news__heading">
+            <h2 class="animate-title">NEWS</h2>
+          </div>
 
-        <div class="news-list">
-          <ul class="news-list__list">
-            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-            <li class="news-list__item">
-              <div class="news-list__heading">
-                <time datetime="2022-01-01" class="news-list__date animate-title">
-                  <?php the_time('Y-m-d'); ?>
-                </time>
-                <div class="news-list__label">
-                  <span class="label-category label-category__<?php $cat = get_the_category();
-                                                                    $cat = $cat[0]; {
-                                                                      echo $cat->slug;
-                                                                    } ?> animate-title">
-                    <?php $cat = get_the_category();
-                          $cat = $cat[0]; {
-                            echo $cat->cat_name;
-                          } ?>
-                  </span>
-                </div>
+          <?php if (have_posts()) : ?>
+
+            <div class="news__body">
+              <div class="news-list">
+                <ul class="news-list__list">
+
+                  <?php while (have_posts()) : the_post(); ?>
+                    <li class="news-list__item">
+                      <div class="news-list__heading">
+                        <time datetime="2022-01-01" class="news-list__date animate-title">
+                          <?php the_time('Y/m/d'); ?>
+                        </time>
+                        <div class="news-list__label">
+                        <?php //カテゴリー名、ラベル色反映
+                            news_cat_color()
+                            ?>
+                        </div>
+                      </div>
+                      <div class="news-list__body">
+                        <a href="<?php the_permalink(); ?>" class="news-list__link animate-title">
+                          <?php the_title(); ?>
+                        </a>
+                      </div>
+                    </li>
+                  <?php endwhile; ?>
+
+                </ul>
               </div>
-              <div class="news-list__body">
-                <a href="<?php the_permalink(); ?>" class="news-list__link animate-title">
-                  <?php the_title(); ?>
-                </a>
-              </div>
-            </li>
-            <?php endwhile;
-              endif; ?>
-          </ul>
+            </div>
+
+
+            <!-- pagination -->
+            <div class="news-detail__pagination">
+            <?php
+              if (function_exists('pagination')) :
+                pagination($wp_query->max_num_pages, get_query_var('paged'));
+              endif;
+              ?>
+            </div>
+
+          <?php else : ?>
+            <p>記事が見つかりませんでした</p>
+          <?php endif; ?>
         </div>
 
-      </div>
-    </div>
-
-    <?php } elseif (in_category(array('5'))) { ?>
-    <div class="l-inner l-inner--sm">
-      <div class="news-detail__heading">
-        <h2 class="animate-title">NEWS一覧</h2>
-      </div>
-
-      <div class="news-detail__body">
-
-        <div class="news-list">
-          <ul class="news-list__list">
-            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-            <li class="news-list__item">
-              <div class="news-list__heading">
-                <time datetime="2022-01-01" class="news-list__date animate-title">
-                  <?php the_time('Y-m-d'); ?>
-                </time>
-                <div class="news-list__label">
-                  <span class="label-category label-category__<?php $cat = get_the_category();
-                                                                    $cat = $cat[0]; {
-                                                                      echo $cat->slug;
-                                                                    } ?> animate-title">
-                    <?php $cat = get_the_category();
-                          $cat = $cat[0]; {
-                            echo $cat->cat_name;
-                          } ?>
-                  </span>
-                </div>
-              </div>
-              <div class="news-list__body">
-                <a href="<?php the_permalink(); ?>" class="news-list__link animate-title">
-                  <?php the_title(); ?>
-                </a>
-              </div>
-            </li>
-            <?php endwhile;
-              endif; ?>
-          </ul>
-        </div>
-
-      </div>
-    </div>
+      </section>
 
 
+    </main>
 
-    <?php } else { ?>
-    <div class="l-inner l-inner--sm">
-      <div class="news-detail__heading">
-        <h2 class="animate-title">NEWS一覧</h2>
-      </div>
+    <!-- footer -->
+    <?php get_template_part('includes/footer'); ?>
 
-      <div class="news-detail__body">
+  </div>
+  <?php get_footer(); ?>
+</body>
 
-        <div class="news-list">
-          <ul class="news-list__list">
-            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-            <li class="news-list__item">
-              <div class="news-list__heading">
-                <time datetime="2022-01-01" class="news-list__date animate-title">
-                  <?php the_time('Y-m-d'); ?>
-                </time>
-                <div class="news-list__label">
-                  <span class="label-category label-category__<?php $cat = get_the_category();
-                                                                    $cat = $cat[0]; {
-                                                                      echo $cat->slug;
-                                                                    } ?> animate-title">
-                    <?php $cat = get_the_category();
-                          $cat = $cat[0]; {
-                            echo $cat->cat_name;
-                          } ?>
-                  </span>
-                </div>
-              </div>
-              <div class="news-list__body">
-                <a href="<?php the_permalink(); ?>" class="news-list__link animate-title">
-                  <?php the_title(); ?>
-                </a>
-              </div>
-            </li>
-            <?php endwhile;
-              endif; ?>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-
-    <?php } ?>
-
-
-
-
-
-
-
-
-  </section>
-
-</main>
-
-
-<?php get_footer(); ?>
+</html>
