@@ -28,7 +28,7 @@
                   <h2 class="animate-title">BLOG</h2>
                 </div>
                 <div class="article__head">
-                  <div class="article__title animate-title"><?php the_field('blog-title'); ?></div>
+                  <div class="article__title animate-title"><?php the_title(); ?></div>
                   <div class="article__info">
                     <time class="article__date"><?php the_date(); ?></time>
                     <div class="article__label">
@@ -49,7 +49,7 @@
                     <img src="<?php echo $image['sizes']['large'];//指定したサイズのサムネイルのURL ?>">
                   </p>
                   <?php endif; ?>
-                  <?php the_field('blog-body'); ?>
+                  <?php the_content(); ?>
 
                 </div>
 

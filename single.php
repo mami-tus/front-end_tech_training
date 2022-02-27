@@ -44,7 +44,7 @@
                   </div>
 
                   <div class="btn">
-                    <a href="<?php echo get_post_type_archive_link('news'); ?>">NEWS一覧</a>
+                    <a href="<?php bloginfo('url'); ?>/news/">NEWS一覧</a>
 
                   </div>
 

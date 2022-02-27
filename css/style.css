@@ -119,7 +119,7 @@ a:hover {
 
 /* line 33, ../sass/base/_base.scss */
 img {
-  max-width: 100%;
+  width: 100%;
 }
 
 /* line 37, ../sass/base/_base.scss */
@@ -746,10 +746,14 @@ ul {
   padding: 0 15px;
 }
 /* line 8, ../sass/layout/_layout.scss */
+.l-inner--xs {
+  max-width: 640px;
+}
+/* line 11, ../sass/layout/_layout.scss */
 .l-inner--sm {
   max-width: 950px;
 }
-/* line 11, ../sass/layout/_layout.scss */
+/* line 15, ../sass/layout/_layout.scss */
 .l-inner--xl {
   max-width: 1140px;
 }

@@ -58,7 +58,7 @@
                       </div>
                     </div>
                     <div class="card__body">
-                      <p class="card__title"><?php the_field('blog-title'); ?></p>
+                      <p class="card__title"><?php the_title(); ?></p>
                     </div>
                   </a>
                 </div>

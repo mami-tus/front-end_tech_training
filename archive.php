@@ -19,7 +19,7 @@
 
       <!-- news一覧 -->
       <section class="news l-section">
-        <div class="l-inner">
+        <div class="l-inner l-inner--xs">
 
           <div class="news__heading">
             <h2 class="animate-title">NEWS</h2>
