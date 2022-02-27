@@ -23,17 +23,17 @@
   &__body {
     margin-bottom: 40px;
   }
-  &__pager-home {
-    text-align: center;
-    background-color: $cBlack;
-    width: 300px;
-    margin:0 auto;
-    a{
-      color: $cWhite;
-      display: block;
-      // display: inline-block;横幅小さいまま
-    }
-  }
+  // &__pager-home {
+  //   text-align: center;
+  //   background-color: $cBlack;
+  //   width: 300px;
+  //   margin:0 auto;
+  //   a{
+  //     color: $cWhite;
+  //     display: block;
+  //     // display: inline-block;横幅小さいまま
+  //   }
+  // }
   //見出しの間にマージン
 h3 {
   margin-top: 40px;

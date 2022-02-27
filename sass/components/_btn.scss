@@ -1,0 +1,12 @@
+.btn {
+  text-align: center;
+  background-color: $cBlack;
+  width: 300px;
+  margin:0 auto;
+  color: $cWhite;
+  a{
+    color: $cWhite;
+    display: block;
+    // display: inline-block;横幅小さいまま
+  }
+}
