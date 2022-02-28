@@ -1,7 +1,7 @@
 .card-wrapper {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
 
   &::after {
     content: "";
@@ -15,6 +15,7 @@
   .card {
     width: 32%;
     margin-bottom: 20px;
+    flex: 0 0 32%;
 
     @include mq(md) {
       width: 100%;
