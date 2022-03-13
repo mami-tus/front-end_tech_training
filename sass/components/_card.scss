@@ -23,7 +23,7 @@
     }
 
     &__img-wrapper {
-      padding-top: (3/4 * 100%);
+      padding-top: (3/4 * 100%); //padding-topを%で指定すると、親要素の横幅に対する相対的な値となる
       position: relative;
 
       img {

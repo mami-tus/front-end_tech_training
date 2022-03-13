@@ -23,18 +23,6 @@ function get_eyecatch_with_default()
   return $img;
 }
 
-// アーカイブページの表示件数を変更する
-function change_posts_per_page($query)
-{
-  if (is_admin() || !$query->is_main_query())
-    return;
-
-  if ($query->is_category(9)) { //BLOG一覧の時に表示件数を9件にセット
-    $query->set('posts_per_page', '9');
-  }
-}
-add_action('pre_get_posts', 'change_posts_per_page');
-
 /**
  * ページネーション出力関数
  * $paged : 現在のページ
@@ -131,8 +119,19 @@ function news_cat_color()
 {
   $categories = get_the_category();
   if ($categories) {
-    $categories_color = get_field('color', 'category_' . $categories[0]->term_id);
+    $categories_color = get_field('cat_color', 'category_' . $categories[0]->term_id);
     $categories_name  = $categories[0]->name;
     echo '<span class="label-category" style="' . esc_attr('background:' . $categories_color) . ';">' . esc_html($categories_name) . '</span>';
   }
 }
+
+//blogのカスタム投稿タイプのアーカイブにて「9件」表示する
+function change_posts_per_page($query) {
+  if ( is_admin() || ! $query->is_main_query() )
+      return;
+  if ( $query->is_archive('blog') ) { //カスタム投稿タイプを指定
+      $query->set( 'posts_per_page', '9' ); //表示件数を指定
+  }
+}
+add_action( 'pre_get_posts', 'change_posts_per_page' );
+

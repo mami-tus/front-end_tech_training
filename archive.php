@@ -38,9 +38,9 @@
                           <?php the_time('Y/m/d'); ?>
                         </time>
                         <div class="news-list__label">
-                        <?php //カテゴリー名、ラベル色反映
-                            news_cat_color()
-                            ?>
+                          <?php //カテゴリー名、ラベル色反映
+                          news_cat_color()
+                          ?>
                         </div>
                       </div>
                       <div class="news-list__body">
@@ -58,7 +58,7 @@
 
             <!-- pagination -->
             <div class="news-detail__pagination">
-            <?php
+              <?php
               if (function_exists('pagination')) :
                 pagination($wp_query->max_num_pages, get_query_var('paged'));
               endif;
