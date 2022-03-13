@@ -3,11 +3,13 @@
   padding: 30px 4% 10px;
   background-color: $cWhite;
   text-align: center;
+
   &__inner {
     display: flex;
     align-items: center;
   }
-  h1 {
+
+  &__logo {
     font-size: 20px;
     margin: 0;
     padding: 0;
@@ -15,22 +17,24 @@
   // a {
   //   text-decoration: none;
   //   color: #4b4b4b;
-  // }
-  nav {
-    margin: 0 0 0 auto;
-  }
-  ul {
-    list-style: none;
-    margin: 0;
-    display: flex;
-  }
-  li {
-    margin: 0 0 0 15px;
-    font-size: 14px;
-  }
+  //
 
 }
 
+.footer-nav {
+  margin: 0 0 0 auto;
 
+  &__list {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;  //子要素の折り返し
+  }
+
+  &__item {
+    margin: 0 0 0 15px;
+    font-size: 14px;
+  }
+}
 
 
